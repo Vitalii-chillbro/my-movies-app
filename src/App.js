@@ -214,7 +214,8 @@ const MovieDetails = ({ selectedId, onCloseMovie, onAddWatched, watched }) => {
   } = movie;
 
   /*eslint-disable*/
-  if (imdbRating > 8) [isTop, setIsTop] = useState(true);
+  let isTop = false;
+  if (imdbRating > 8) isTop = true;
 
   const handleAdd = () => {
     const newWatchedMovie = {
